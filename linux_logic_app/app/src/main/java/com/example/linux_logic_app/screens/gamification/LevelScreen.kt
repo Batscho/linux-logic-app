@@ -1,4 +1,4 @@
-package com.example.linux_logic_app.screens
+package com.example.linux_logic_app.screens.gamification
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.animateFloatAsState
