@@ -58,7 +58,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    // Externe Packages
+    // Externe Libraries
     // https://mvnrepository.com/artifact/androidx.compose.ui/ui-text-google-fonts
     implementation(libs.androidx.ui.text.google.fonts)
     // https://mvnrepository.com/artifact/androidx.navigation/navigation-compose
