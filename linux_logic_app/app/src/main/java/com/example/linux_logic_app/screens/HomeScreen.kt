@@ -99,7 +99,7 @@ fun HomeScreen(userViewModel: UserViewModel) {
 
                     Text(
                         text = "Nahtlos weiterspielen",
-                        style = MaterialTheme.typography.labelMedium,
+                        style = MaterialTheme.typography.labelSmall,
                         modifier = Modifier
                             .align(Alignment.CenterVertically)
                     )
@@ -124,7 +124,7 @@ fun HomeScreen(userViewModel: UserViewModel) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        UserProgressBar(progress = 0.98F, userViewModel = userViewModel)
+        UserProgressBar(progress = 0.86F, userViewModel = userViewModel)
 
         /*Box(
             modifier = Modifier

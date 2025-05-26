@@ -20,8 +20,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.twotone.Login
 import androidx.compose.material.icons.twotone.Email
@@ -151,6 +153,7 @@ fun LoginScreen(navController: NavController, userViewModel: UserViewModel) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
                     .align(Alignment.Center), // Vertikale Zentrierung
                 horizontalAlignment = Alignment.CenterHorizontally, // Horizontale Zentrierung
             ) {
@@ -300,7 +303,8 @@ fun LoginScreen(navController: NavController, userViewModel: UserViewModel) {
                     },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(start = 32.dp, end = 32.dp),
+                        .padding(start = 32.dp, end = 32.dp)
+                        .imePadding(),
                     contentPadding = PaddingValues(16.dp),
                     colors = ButtonDefaults.buttonColors().copy(
                         containerColor = LiloBlue,

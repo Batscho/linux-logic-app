@@ -17,8 +17,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.twotone.ArrowBackIosNew
@@ -41,6 +43,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarColors
@@ -66,6 +69,7 @@ import com.example.linux_logic_app.R
 import com.example.linux_logic_app.components.viewmodels.UserViewModel
 import com.example.linux_logic_app.ui.theme.LiloBlue
 import com.example.linux_logic_app.ui.theme.LiloDanger
+import com.example.linux_logic_app.ui.theme.LiloDark
 import com.example.linux_logic_app.ui.theme.LiloMain
 import com.example.linux_logic_app.ui.theme.LiloOrange
 import com.example.linux_logic_app.ui.theme.LiloSuccess
@@ -227,6 +231,7 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                     //settingsViewModel.updateAccountCardExpanded(!expanded)
                     expanded = !expanded
                 }
+                .verticalScroll(rememberScrollState())
                 .padding(16.dp)
                 .imePadding(),  // Dieser Modifier fügt weiteren Platz hinzu, falls die Tastatur eingeblendet wird.
         ) {
@@ -285,7 +290,8 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                             )
                         },
                         modifier = Modifier
-                            .fillMaxWidth(),
+                            .fillMaxWidth()
+                            .imePadding(),
                         shape = RoundedCornerShape(8.dp), // Abgerundete Ecken
                         singleLine = true, // Verhindert den Zeilenumbruch
                         keyboardOptions = KeyboardOptions.Default.copy(
@@ -302,7 +308,28 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                                 )
                             }
                         },
-                        enabled = editingEnabled
+                        enabled = editingEnabled,
+                        colors = OutlinedTextFieldDefaults.colors(
+                            disabledBorderColor = LiloDark,
+                            disabledTextColor = LiloMain,
+                            disabledLabelColor = LiloDark,
+                            unfocusedTextColor = Color.White,
+                            unfocusedLabelColor = LiloMain,
+                            unfocusedBorderColor = LiloMain,
+                            focusedBorderColor = LiloMain,
+                            focusedTextColor = Color.White,
+                            focusedLabelColor = LiloMain,
+                            cursorColor = LiloMain,
+                            errorBorderColor = LiloDanger,
+                            errorLabelColor = LiloDanger,
+                            errorTextColor = Color.White,
+                            errorSupportingTextColor = LiloDanger,
+                            focusedSupportingTextColor = LiloDanger,
+                            unfocusedSupportingTextColor = LiloDanger,
+                            errorPlaceholderColor = Color.White,
+                            focusedPlaceholderColor = Color.White,
+                            unfocusedPlaceholderColor = Color.White,
+                        )
                     )
 
                     OutlinedTextField(
@@ -331,7 +358,8 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                             )
                         },
                         modifier = Modifier
-                            .fillMaxWidth(), // Volle Breite der Box
+                            .fillMaxWidth() // Volle Breite der Box
+                            .imePadding(),
                         shape = RoundedCornerShape(8.dp), // Abgerundete Ecken
                         singleLine = true, // Verhindert den Zeilenumbruch
                         keyboardOptions = KeyboardOptions.Default.copy(
@@ -348,7 +376,28 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                                 )
                             }
                         },
-                        enabled = editingEnabled
+                        enabled = editingEnabled,
+                        colors = OutlinedTextFieldDefaults.colors(
+                            disabledBorderColor = LiloDark,
+                            disabledTextColor = LiloMain,
+                            disabledLabelColor = LiloDark,
+                            unfocusedTextColor = Color.White,
+                            unfocusedLabelColor = LiloMain,
+                            unfocusedBorderColor = LiloMain,
+                            focusedBorderColor = LiloMain,
+                            focusedTextColor = Color.White,
+                            focusedLabelColor = LiloMain,
+                            cursorColor = LiloMain,
+                            errorBorderColor = LiloDanger,
+                            errorLabelColor = LiloDanger,
+                            errorTextColor = Color.White,
+                            errorSupportingTextColor = LiloDanger,
+                            focusedSupportingTextColor = LiloDanger,
+                            unfocusedSupportingTextColor = LiloDanger,
+                            errorPlaceholderColor = Color.White,
+                            focusedPlaceholderColor = Color.White,
+                            unfocusedPlaceholderColor = Color.White,
+                        )
                     )
 
                     OutlinedTextField(
@@ -377,7 +426,8 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                             )
                         },
                         modifier = Modifier
-                            .fillMaxWidth(), // Volle Breite der Box
+                            .fillMaxWidth() // Volle Breite der Box
+                            .imePadding(),
                         shape = RoundedCornerShape(8.dp), // Abgerundete Ecken
                         singleLine = true, // Verhindert den Zeilenumbruch
                         keyboardOptions = KeyboardOptions.Default.copy(
@@ -414,7 +464,28 @@ fun AccountSettingsCard(userViewModel: UserViewModel) {
                                 )
                             }
                         },
-                        enabled = editingEnabled
+                        enabled = editingEnabled,
+                        colors = OutlinedTextFieldDefaults.colors(
+                            disabledBorderColor = LiloDark,
+                            disabledTextColor = LiloMain,
+                            disabledLabelColor = LiloDark,
+                            unfocusedTextColor = Color.White,
+                            unfocusedLabelColor = LiloMain,
+                            unfocusedBorderColor = LiloMain,
+                            focusedBorderColor = LiloMain,
+                            focusedTextColor = Color.White,
+                            focusedLabelColor = LiloMain,
+                            cursorColor = LiloMain,
+                            errorBorderColor = LiloDanger,
+                            errorLabelColor = LiloDanger,
+                            errorTextColor = Color.White,
+                            errorSupportingTextColor = LiloDanger,
+                            focusedSupportingTextColor = LiloDanger,
+                            unfocusedSupportingTextColor = LiloDanger,
+                            errorPlaceholderColor = Color.White,
+                            focusedPlaceholderColor = Color.White,
+                            unfocusedPlaceholderColor = Color.White,
+                        )
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
