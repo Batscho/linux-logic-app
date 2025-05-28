@@ -2,6 +2,9 @@
 
 In diesem Ordner wird das Frontend der App Linux Logic entwickelt, dabei soll dieses möglichst kulant und anwenderfreundlich sein, mit der Intention Linux-Kenntnisse vermitteln zu können und soll dabei einen Gamification Aspekt miteinbeziehen.
 
+- [Core-Library](https://github.com/aaabdulkarim/linux-logic/tree/main/FrontendApp) – Die mobile App im Gesamtkonzept von Linux Logic (Kollaboration aller Teilbereiche)
+- [Mobile-App Frontend](https://github.com/Batscho/linux-logic-app/tree/main/linux_logic_app) – Nur die Jetpack Compose App (individueller Teilbereich)
+
 ## Inhaltsverzeichnis
 
 - **Einleitung**
